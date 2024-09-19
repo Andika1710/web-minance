@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mangcoding Template</title>
+  </head>
+  <body>
+    <header class="w-full bg-bghero fixed z-20 ">
+        <nav class="container py-[12px]">
+          <div class="flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center">
+              <img src="/LogoH.svg" alt="Logo" class="lg:w-full md:w-[138px]" />
+            </div>
+  
+            <!-- Navigation Links & Language Switcher -->
+            <div class="md:flex gap-5 items-center hidden">
+              <!-- Navigation Links -->
+              <ul class="flex gap-[48px] text-[14px] leading-[2%]">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Download</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+  
+              <!-- Divider Line -->
+              <div class="border-[1.5px] border-[#E3E3E3] h-full"></div>
+  
+              <!-- Language Switcher -->
+              <div
+                class="flex items-center border rounded-[100px] py-[8px] px-[10px] gap-[4px]"
+              >
+                <p class="text-[#E3E3E3] text-[14px]">ENG</p>
+                <img src="/IconH.svg" alt="Arrow" />
+                <img src="/Flag.svg" alt="Flag" />
+              </div>
+  
+              <!-- Sign Up Button -->
+              <div>
+                <button class="btn btn__primary">Sign Up</button>
+              </div>
+            </div>
+  
+            <!-- Hamburger Menu for mobile -->
+            <div x-data="{ open: false }" class="md:hidden block">
+              <button @click="open = ! open">
+                <img src="/Icon.png" alt="IconHamburger" />
+              </button>
+              <div
+                x-show="open"
+                class="bg-white absolute h-full left-0 top-0 w-screen px-[24px] pt-[12px]"
+              >
+                <div class="flex items-center mb-[24px]">
+                  <img
+                    src="/LogoMobile.png"
+                    alt="Logo"
+                    class="lg:w-full md:w-[138px] pb-[12px]"
+                  />
+                  <img
+                    src="/IconClose.png"
+                    alt="IconClose"
+                    class="ml-auto"
+                    @click="open = ! open"
+                  />
+                </div>
+                <div
+                  class="flex flex-col gap-5 items-left w-full pt-[12px] pb-[12px]"
+                >
+                  <!-- Navigation Links mobile-->
+                  <ul class="flex flex-col gap-[48px] text-[14px] leading-[2%]">
+                    <li><a class="text-black" href="#">About</a></li>
+                    <li><a class="text-black" href="#">Download</a></li>
+                    <li><a class="text-black" href="#">Contact</a></li>
+                  </ul>
+                  <!-- Language Switcher mobile-->
+                  <div
+                    class="flex items-center border rounded-[100px] py-[8px] px-[10px] gap-[4px] mt-[32px]"
+                  >
+                    <p class="font-medium text-[14px]">ENG</p>
+                    <img src="/IconArrowBlack.png" alt="Arrow" />
+                    <img src="/Flag.svg" alt="Flag" class="ml-auto" />
+                  </div>
+  
+                  <!-- Sign Up Button mobile-->
+                  <div>
+                    <button class="btn btn__primary w-full">Sign Up</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Content 1 -->
+    <section class="bg-bghero  pt-[100px] pb-[110px] "> 
+        <div class=" container flex flex-col md:flex-row ">
+            <h1 class="w-[327px] md:w-[460px] xl:w-[760px] text-white leading-[42px] md:leading-[64px] lg:leading-[88px] text-[32px] md:text-[40px] lg:text-[48px] xl:text-[64px] font-semibold font-inter ">Learn more about Minance and Team</h1>
+            <p class="w-[327px] lg:w-[527px] flex items-end text-[#E3E3E3] font-inter leading-[26px] text-[14px] lg:text-[16px]">
+                Our team consists of experienced professionals in technology and finance who are dedicated to providing the best solutions for users.
+            </p>
+        </div>
+        <div class="container flex md:flex-row items-center justify-center gap-[24px] overflow-auto"
+        x-data="{
+                     Reviewsteam: [
+                       {
+                         name: 'Deni',
+                         img: '/ImgDeni.png',
+                         position: '3D Designer'
+                        
+                       },
+                       {
+                         name: 'Nugraha',
+                         img: '/ImgNugraha.png',
+                         position: 'CEO of Minance App'
+                        
+                       },
+                       {
+                         name: 'Purwa Adi Wicaksana',
+                         img: '/ImgPurwa.png',
+                         position: 'UI/UX Designer'
+                        
+                       },
+                       {
+                         name: 'Yayan Kurnia',
+                         img: '/ImgYayan.png',
+                         position: 'Marketing specialist'
+                        
+                       }
+                     ]
+                   }">
+            <template x-for="Review in Reviewsteam" :key="Review.name">
+                <div class=" review-item text-start  mt-[24px]  py-[24px] lg:w-[315px] ">
+                    <p class="text-[16px] font-inter " x-text="Review.text"></p>
+                    <div class=" ">
+                        <img class="" :src="Review.img" alt="ImgUser" class="user-img">
+                        <div class=" mt-[16px]">
+                            <p class="text-[24px] text-white font-inter font-semibold" x-text="Review.name"></p>
+                            <p class="text-[#E3E3E3] font-inter " x-text="Review.position"></p>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            
+
+        </div>
+    </section>
+    <!-- Content 2 -->
+     <section class="container">
+        <div class=" mt-[60px] flex flex-col items-center  justify-center">
+            <h2 class="text-[48px] font-inter font-semibold leading-[60px]">Management of out Money</h2>
+            <p class="text-[14px] font-inter mt-[16px] mb-[40px]">Meet Team and discussion about Minance Management</p>
+            <video src="/VidAbout.mp4" class="w-[100%] rounded-[24px]" controls></video>
+        </div>
+        <div class=" grid grid-cols-3 mt-[24px] pb-[40px]   ">
+          <div class="text-center ">
+            <p class="text-[32px] text-[#111111] md:text-[40px] font-inter font-semibold">
+              1k+
+            </p>
+            <p class="text-[14px] text-[#8C8C8C] font-inter">
+              User Use
+            </p>
+          </div>
+          <div class="text-center">
+            <p class="text-[32px] text-[#111111] md:text-[40px] font-inter font-semibold">
+              20k+
+            </p>
+            <p class="text-[14px] text-[#8C8C8C] font-inter">
+              Satisfield Customer
+            </p>
+          </div>
+          <div class="text-center">
+            <p class="text-[32px] text-[#111111] md:text-[40px] font-inter font-semibold">
+              4.9+
+            </p>
+            <p class="text-[14px] text-[#8C8C8C] font-inter">
+              Rating user
+            </p>
+          </div>
+           
+        </div>
+        
+     </section>
+     <!-- Content 3 -->
+     <section>
+      <div class="container   ">
+        <div class=" bg-bgHero5  bg-no-repeat bg-cover pt-[18px] md:pl-[60px] px-[24px] rounded-[24px]  ">
+          <div class="md:w-[380px]">
+              <h3 class="font-inter font-semibold md:text-[48px] leadding-[32px] md:leading-[64px] text-[#9ABFFE]">Get the Minance mobile app</h3>
+              <p class="py-[24px] font-inter text-[14px] text-[#E3E3E3]">The First Application that is widely use and trusted by many companies</p>
+            <div class="flex gap-[10px] pb-[24px]">
+              <p class="font-inter text-[14px] text-white">Download app</p>
+              <img src="/IconD.svg" alt="IconArrow">
+            </div>
+            <div>
+              <img class=" mb-auto block md:hidden" src="/ImgPhoneM.png" alt="Img Phone">
+            </div>
+          </div>
+         
+        </div>
+       </div> 
+     </section>
+</main>
+<footer class="bg-[#024BCA] mt-[60px]  w-full">
+  <div class="container flex sm:flex-col md:flex-row  justify-between gap-[40px] ">
+    <div class="  sm:pt-[40px] md:py-[60px] sm:w-[327px] md:w-[426px]">
+      <img src="/LogoH.svg" alt="logoFotter">
+      <p class="py-[40px] font-inter text-[#E3E3E3] text-[14px]">At Minance, we help you achieve your financial goals with confidence. With 2 years of experience, we offer personalized financial planning and innovative banking services. Join us for a journey to financial stability and growth.</p>
+      <img src="/Medsos.svg" alt="ImgMedsos">
+    </div>
+    <div class="flex sm:flex-col md:flex-row justify-between  md:py-[60px] sm:w-[327px]  md:w-[568px]">
+      <div class="w-[184px]">
+        <p class="font-inter text-white text-[14px] mb-[24px]">Company</p>
+        <div class="">
+          <div class="flex flex-col">
+            <a href="#">About Us</a>
+            <a class="py-[16px]" href="#">Blog</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="w-[184px] sm:mt-[16px] md:mt-0">
+        <p class="font-inter text-white text-[14px] mb-[24px]">Contact us</p>
+        <div class="mb-[60px]">
+          <div class="flex flex-col">
+            <a class="text-[#E3E3E3]" href="#">+22 80 1234 4321</a>
+            <p class="font-inter text-white text-[14px] py-[16px]">Support</p>
+            <a class="text-[#E3E3E3]" href="#">+22 80 1234 2233</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex justify-center items-center mb-auto sm:hidden md:block w-[100%] px-[50px]">
+    <img  src="/LogoFooter.png" alt="logoFooter">
+  </div>
+</footer>
+      <script type="module" src="/main.js"></script>
+  </body>
+  </html>

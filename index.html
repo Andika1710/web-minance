@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mangcoding Template</title>
+  </head>
+  <body id="app">
+    <!-- Header Section -->
+    <header class="w-full bg-bghero fixed z-20">
+      <nav class="container py-[12px]">
+        <div class="flex justify-between items-center">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <img src="/LogoH.svg" alt="Logo" class="lg:w-full md:w-[138px]" />
+          </div>
+
+          <!-- Navigation Links & Language Switcher -->
+          <div class="md:flex gap-5 items-center hidden">
+            <!-- Navigation Links -->
+            <ul class="flex gap-[48px] text-[14px] leading-[2%]">
+              <li><a href="about.html">About</a></li>
+              <li><a href="#">Download</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+
+            <!-- Divider Line -->
+            <div class="border-[1.5px] border-[#E3E3E3] h-full"></div>
+
+            <!-- Language Switcher -->
+            <div
+              class="flex items-center border rounded-[100px] py-[8px] px-[10px] gap-[4px]"
+            >
+              <p class="text-[#E3E3E3] text-[14px]">ENG</p>
+              <img src="/IconH.svg" alt="Arrow" />
+              <img src="/Flag.svg" alt="Flag" />
+            </div>
+
+            <!-- Sign Up Button -->
+            <div>
+              <button class="btn btn__primary">Sign Up</button>
+            </div>
+          </div>
+
+          <!-- Hamburger Menu for mobile -->
+          <div x-data="{ open: false }" class="md:hidden block">
+            <button @click="open = ! open">
+              <img src="/Icon.png" alt="IconHamburger" />
+            </button>
+            <div
+              x-show="open"
+              class="bg-white absolute h-full left-0 top-0 w-screen px-[24px] pt-[12px]"
+            >
+              <div class="flex items-center mb-[24px]">
+                <img
+                  src="/LogoMobile.png"
+                  alt="Logo"
+                  class="lg:w-full md:w-[138px] pb-[12px]"
+                />
+                <img
+                  src="/IconClose.png"
+                  alt="IconClose"
+                  class="ml-auto"
+                  @click="open = ! open"
+                />
+              </div>
+              <div
+                class="flex flex-col gap-5 items-left w-full pt-[12px] pb-[12px]"
+              >
+                <!-- Navigation Links mobile-->
+                <ul class="flex flex-col gap-[48px] text-[14px] leading-[2%]">
+                  <li><a class="text-black" href="#">About</a></li>
+                  <li><a class="text-black" href="#">Download</a></li>
+                  <li><a class="text-black" href="#">Contact</a></li>
+                </ul>
+                <!-- Language Switcher mobile-->
+                <div
+                  class="flex items-center border rounded-[100px] py-[8px] px-[10px] gap-[4px] mt-[32px]"
+                >
+                  <p class="font-medium text-[14px]">ENG</p>
+                  <img src="/IconArrowBlack.png" alt="Arrow" />
+                  <img src="/Flag.svg" alt="Flag" class="ml-auto" />
+                </div>
+
+                <!-- Sign Up Button mobile-->
+                <div>
+                  <button class="btn btn__primary w-full">Sign Up</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Main Section -->
+    <main>
+      <!-- Content 1 -->
+      <section class="bg-bghero pt-[84px]"> 
+        <div class="container lg:w-[1096px] md:w-[944px]">
+          <h1
+            class="text-[32px] lg:text-[64px] md:text-[48px] font-semibold text-center font-inter lg:leading-[88px] md:leading-[64px] text-white"
+          >
+            Save your finances and transfer to any bank in the world
+          </h1>
+        </div>
+        <div class="container flex flex-col md:flex-row ">
+          <div class="flex-col mt-auto lg:w-[337px] md:w-[242px]">
+            <p class="mt-[24px] mb-[24px] text-center md:text-start leading-[24px] text-[14px] lg:text-[16px] font-inter text-[#E3E3E3] lg:leading-[26px] md:leading-[24px]">
+              Making it fun and easy for you to transfer, top up and receive
+              money from anywhere in the world, with more currencies easy to do
+            </p>
+            <div class="flex justify-center md:justify-start">
+              <button class="  btn btn__primary">
+                Create Account now
+              </button>
+            </div>
+            <div
+              class="flex justify-center md:justify-start mt-[40px] mb-[60px]">
+              <img src="ImgRating.png" alt="ImgRating" />
+            </div>
+              <!-- rating mobile -->
+              <div class="flex w-full justify-center items-center text-center lg:w-[271px] md:w-[242px] md:text-right gap-[24px] gap:[24px]  lg:gap-[60px] lg:mt-auto lg:mb-[60px] font-inter lg:ml-[127.4px] md:hidden ">
+                <div class=" ">
+                  <p class="text-[24px] md:text-[32px] font-semibold text-white">1k+</p>
+                  <p class="text-[14px] md:text-[14px] text-[#E3E3E3]">User Use</p>
+                </div>
+                <div class="">
+                  <p class="text-[24px] md:text-[32px] font-semibold text-white">20k+</p>
+                  <p class="text-[14px] md:text-[14px] text-[#E3E3E3]">Satisfield Customer</p>
+                </div>
+                <div class="">
+                  <p class="text-[24px] md:text-[32px] font-semibold text-white">4.9+</p>
+                  <p class="text-[14px] md:text-[14px] text-[#E3E3E3]">Rating user</p>
+                </div>
+                
+                </div>
+          </div>
+          <div class="flex items-center justify-center mt-auto">
+            <img src="/ImgPhone.png" alt="ImagePhone" />
+          </div>
+          <!-- rating Destop -->
+          <div class="md:flex md:flex-col lg:w-[271px] md:w-[242px] text-right gap-[60px] mt-auto lg:mb-[60px] font-inter mb-[60px] hidden ">
+          <div>
+            <p class="md:text-[32px] font-semibold text-white">1k+</p>
+            <p class="md:text-[14px] text-[#E3E3E3]">User Use</p>
+          </div>
+          <div>
+            <p class="md:text-[32px] font-semibold text-white">20k+</p>
+            <p class="md:text-[14px] text-[#E3E3E3]">Satisfield Customer</p>
+          </div>
+          <div>
+            <p class="md:text-[32px] font-semibold text-white">4.9+</p>
+            <p class="md:text-[14px] text-[#E3E3E3]">Rating user</p>
+          </div>
+          
+          </div>
+        
+        </div>
+      </section>
+      <!-- Content 2 -->
+      <section>
+      <div class="container">
+        <div class=" grid grid-cols-1 md:grid-cols-2 mt-[32px] xl:mt-[60px] text-center md:text-start md:gap-[40px] xl:gap-[135px] ">
+          <div class="flex flex-col xl:w-[650px]  justify-center  ">
+            <h2 class="text-[24px] md:text-[48px]  lg:text-[48px] font-inter  font-semibold text-[#111111]  leading-[32px] lg:leading-[64px] md:leading-[54px] ">
+              Financial management for our future
+            </h2>
+            <p class=" font-inter  mb-[24px] text-[14px] md:text-[14px]  lg:text-[24px]"></p>
+            At Minance, we help you achieve your financial goals with confidence. With 2 years of experience, we offer personalized financial planning and innovative banking services. Join us for a journey to financial stability and growth.
+          </p>
+          <div class="flex justify-center md:justify-start">
+            <button class=" md:text-start mt-[24px] btn btn__primary ">Our Company Story</button>
+          </div>
+        </div>
+        <div class="mt-[24px] bg-[#F5F5F5] rounded-[24px] mb-[32px]">
+          <img class=" mt-[24px] md:justify-start  lg:w-[538px] rounded-[24px] flex justify-center items-center mb-[32px]" src="/GroupDate.png" alt="GroupDate">
+        </div>
+    
+        </div>
+        <div class=" border-t-[1.5px] grid grid-cols-1 md:grid-cols-3 pt-[40px] pb-[40px] gap-[40px] ">
+          <div class="">
+            <img class=" border rounded-[100px]" src="/IconArrowB.svg" alt="IconArrowB">
+            <h3 class="text-[24px] font-inter font-semibold my-[16px] ">Receive</h3>
+            <p class="text-[14px] font-inter">Minance Accepts all currencies and from all over the world, making you happy with its Features</p>
+          </div>
+          <div class="">
+            <img class=" border rounded-[100px]" src="/IconArrowT.svg" alt="IconArrowB">
+            <h3 class="text-[24px] font-inter font-semibold my-[16px] ">Transfer</h3>
+            <p class="text-[14px] font-inter">Minance Accepts all currencies and from all over the world, making you happy with its Features</p>
+          </div>
+          <div class="">
+            <img class=" border rounded-[100px]" src="/IconArrowS.svg" alt="IconArrowB">
+            <h3 class="text-[24px] font-inter font-semibold my-[16px] ">Top Up</h3>
+            <p class="text-[14px] font-inter">Minance Accepts all currencies and from all over the world, making you happy with its Features</p>
+          </div>
+        </div>
+      </div>
+      </section>
+      <!-- Content 3 -->
+      <section>
+        <div class="container mb-[60px] ">
+          <div class="flex justify-center text-center">
+            <div class="md:w-[650px] pt-[60px] pb-[40px]">
+              <h2 class="mb-[24px]">What you get if you use us</h2>
+              <p>You can get many fiture from minance, download and use our applcation make you easy to manage your Finance</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-[24px]">
+              <div class="bg-[#EBF2FF] rounded-[16px] ">
+                <div class=" pt-[20px] px-[24px]">
+                  <img src="/IconDompet.svg" alt="IconDompet">
+                  <h3 class="text-[24px] font-inter font-semibold my-[16px] ">Automatic Payment</h3>
+                  <p class="text-[14px] font-inter">Stremline your financial processes and reduce manual effort. Spend less time on data entry</p>
+                </div>
+                  <div class="">
+                    <img src="/BgApk.png" alt="BgApk">
+                  </div>
+                  </div>
+              <div class="bg-[#EBF2FF] rounded-[16px]  px-[24px]">
+                <div class="pt-[20px]">
+                  <img src="/IconSecurity.svg" alt="IconSecurity">
+                  <h3 class="text-[24px] font-inter font-semibold my-[16px] ">Data Security</h3>
+                  <p class="text-[14px] font-inter">Protect 24/7 Days and Don't worry about cyber security in our Company</p>
+                </div>
+                <div class="py-[75px]">
+                  <img src="/BgProtection.png" alt="BgProtection">
+                </div>
+              </div>
+              <div class="bg-[#EBF2FF] rounded-[16px]  px-[24px]">
+                <div class="pt-[20px]">
+                  <img src="/IconUser.svg" alt="IconUser">
+                  <h3 class="text-[24px] font-inter font-semibold my-[16px] ">User Friendly</h3>
+                  <p class="text-[14px] font-inter">We make application for easy to use and user friendly, suitable for all group</p>
+                </div>
+                <div class="flex justify-center pt-[20px]" >
+                  <img src="/BgiPhone15.png" alt="BgiPhone15">
+                </div>
+              </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-[24px] pt-[24px] ">
+            <div class="bg-bgHero3 bg-no-repeat rounded-[16px] sm:h-[500px] bg-center ">
+              <div class=" pt-[20px] px-[24px]">
+                <img src="/lightning.svg" alt="lightning">
+                <h3 class="text-[24px] font-inter font-semibold my-[16px] ">Fast Money Transfer Delivery</h3>
+                <p class="text-[14px] font-inter">Minance has a fast feature in sending money which makes it special</p>
+              </div>
+            </div>
+            <div class="bg-bgHero4 bg-no-repeat rounded-[16px]  ">
+              <div class=" pt-[20px] px-[24px]">
+                <img src="/star.svg" alt="star">
+                <h3 class="text-[24px] font-inter font-semibold my-[16px] ">International Money Payment</h3>
+                <p class="text-[14px] font-inter">Minance has more currencies you can use</p>
+              </div>
+              <div class="mt-[71px] ml-[32px] ">
+                <div class="flex items-center bg-white bg-opacity-[40%] rounded-[16px] w-[270px] px-[13px] py-[14px]  md:px-[18px] md:py-[12px]">
+                  <img src="/FlagIND.svg" alt="FlagIND" class="mr-2">
+                  <div class="">
+                    <p class="text-[10px] md:text-[12px] text-[#8C8C8C] font-inter">My Current Balance</p>
+                    <p class="text-[18px] md:text-[24px] text-black font-inter">Rp 2.900.000</p>
+                  </div>
+                </div>
+                <div class="flex items-center bg-white bg-opacity-[40%] rounded-[16px] w-[270px] px-[13px] py-[14px]  md:px-[18px] md:py-[12px] mt-[20px] ">
+                  <img src="/FlagENG.svg" alt="FlagENG" class="mr-2">
+                  <div class="">
+                    <p class="text-[10px] md:text-[12px] text-[#8C8C8C] font-inter">My Current Balance</p>
+                    <p class="text-[18px] md:text-[24px] text-black font-inter">$150.000</p>
+                  </div>
+                </div>
+
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Content 4 -->
+      <section>
+        <div class="container pb-[60px]">
+          <div class="flex justify-center text-center ">
+            <div class="md:w-[650px]">
+              <h2 class="text-[24px] md:text-[46px] leding-[32px] md:leading-[64px] font-inter font-semibold text-[#111111] ">200+ Finance with regular expenses using Minance</h2>
+              <p class="my-[24px] lg:text-[14px] font-inter text-[#8C8C8C] ">Minance has been used by many companies, any many compansies trusted to our Security for the security of their data</p>
+            </div>
+          </div>
+          <div class="relative w-full overflow-hidden"
+          x-data="{
+              logos: [
+                  '/LogoBankin.png',
+                  '/LogoGoogle.png',
+                  '/LogoSlack.png',
+                  '/LogoAdobe.png',
+                  '/LogoMsf.png',
+                  '/LogoSpoty.png',
+                  '/LogoGusto.png',
+                  '/LogoStripe.png',
+              ]
+          }">
+          
+          <!-- Slider Container -->
+          <div class="flex lg:grid grid-cols-2 md:grid-cols-4 gap-[20px] mt-[40px] overflow-x-auto lg:overflow-visible ">
+              <template x-for="logo in logos" :key="logo">
+                  <div class="bg-[#F7F7F7] flex-shrink-0 rounded-[16px] px-[26px] md:px-[40px] py-[25px] md:py-[43px] flex justify-center lg:mx-0 w-[143px] md:w-auto">
+                      <img class="w-[90px] md:w-[auto]" :src="logo" alt="Logo" class="">
+                  </div>
+              </template>
+          </div>
+      </div>
+      
+         
+          
+      </section>
+      <!-- Content 5 -->
+      <section>
+        <div class="container sm:flex-col justify-center flex items-center md:items-start  md:flex-row  md:justify-between   text-center md:text-start overflow-scroll  my-[32px]">
+          <div class=" w-[295px] md:w-[390px] lg:w-[650px]   ">
+                     <h3 class="md:text-[48px] text-[24px] font-inter font-semibold leading-[32px] md:leading-[60px]">View some review from Minance User</h3>
+                     <p class="mt-[24px] text-[14px] font-inter ">What many people say about this app and how do you feel when you use this app for your Money Management</p>
+                   </div>
+                   
+                   <div
+                   class="h-[282px] md:h-[582px] "
+                   x-data="{
+                     Reviews: [
+                       {
+                         name: 'Nugraha',
+                         img: '/UserK.svg',
+                         position: 'Manager',
+                         text: 'Minance App has changed the way we manage company finances. The intuitive interface and complete features make the financial management process more efficient and accurate. I highly recommend Minance App for companies looking to optimize their financial management.'
+                       },
+                       {
+                         name: 'Amar',
+                         img: '/UserK.svg',
+                         position: 'Frontend Developer',
+                         text: 'Minance App has changed the way we manage company finances. The intuitive interface and complete features make the financial management process more efficient and accurate. I highly recommend Minance App for companies looking to optimize their financial management.'
+                       },
+                       {
+                         name: 'Satria',
+                         img: '/UserK.svg',
+                         position: 'Backend Developer',
+                         text: 'Minance App has changed the way we manage company finances. The intuitive interface and complete features make the financial management process more efficient and accurate. I highly recommend Minance App for companies looking to optimize their financial management.'
+                       },
+                       {
+                         name: 'Irvan',
+                         img: '/UserK.svg',
+                         position: 'Fullstack Developer',
+                         text: 'Minance App has changed the way we manage company finances. The intuitive interface and complete features make the financial management process more efficient and accurate. I highly recommend Minance App for companies looking to optimize their financial management.'
+                       }
+                     ]
+                   }">
+                     <template x-for="Review in Reviews" :key="Review.name">
+                       <div class="review-item text-start border-[1px] mt-[24px] rounded-[16px] py-[24px] px-[16px] w-[295px] lg:w-[538px] ">
+                         <p class="text-[16px] font-inter " x-text="Review.text"></p>
+                         <div class="flex mt-[24px]">
+                           <img :src="Review.img" alt="ImgUser" class="user-img">
+                           <div class="ml-[6px]">
+                             <p class="text-[16px] font-inter font-bold" x-text="Review.name"></p>
+                             <p class="text-[12px] font-inter mt-[6px]" x-text="Review.position"></p>
+                           </div>
+                         </div>
+                       </div>
+                     </template>
+                   </div>
+                   
+                 </div>
+      </section>
+      <!-- Content 6 -->
+       <section>
+         <div class="container   ">
+            <div class=" bg-bgHero5  bg-no-repeat bg-cover pt-[18px] md:pl-[60px] px-[24px] rounded-[24px]  ">
+              <div class="md:w-[380px]">
+                  <h3 class="font-inter font-semibold md:text-[48px] leadding-[32px] md:leading-[64px] text-[#9ABFFE]">Get the Minance mobile app</h3>
+                  <p class="py-[24px] font-inter text-[14px] text-[#E3E3E3]">The First Application that is widely use and trusted by many companies</p>
+                <div class="flex gap-[10px] pb-[24px]">
+                  <p class="font-inter text-[14px] text-white">Download app</p>
+                  <img src="/IconD.svg" alt="IconArrow">
+                </div>
+                <div>
+                  <img class=" mb-auto block md:hidden" src="/ImgPhoneM.png" alt="Img Phone">
+                </div>
+              </div>
+             
+            </div>
+           </div> 
+       </section>
+       <section>
+        <p>contoh doang nanti di hapus</p>
+      </section>
+    </main>
+    <!-- Footer Section -->
+    <footer class="bg-[#024BCA] mt-[60px]  w-full">
+      <div class="container flex sm:flex-col md:flex-row  justify-between gap-[40px] ">
+        <div class="  sm:pt-[40px] md:py-[60px] sm:w-[327px] md:w-[426px]">
+          <img src="/LogoH.svg" alt="logoFotter">
+          <p class="py-[40px] font-inter text-[#E3E3E3] text-[14px]">At Minance, we help you achieve your financial goals with confidence. With 2 years of experience, we offer personalized financial planning and innovative banking services. Join us for a journey to financial stability and growth.</p>
+          <img src="/Medsos.svg" alt="ImgMedsos">
+        </div>
+        <div class="flex sm:flex-col md:flex-row justify-between  md:py-[60px] sm:w-[327px]  md:w-[568px]">
+          <div class="w-[184px]">
+            <p class="font-inter text-white text-[14px] mb-[24px]">Company</p>
+            <div class="">
+              <div class="flex flex-col">
+                <a href="#">About Us</a>
+                <a class="py-[16px]" href="#">Blog</a>
+                <a href="#">Contact</a>
+              </div>
+            </div>
+          </div>
+          <div class="w-[184px] sm:mt-[16px] md:mt-0">
+            <p class="font-inter text-white text-[14px] mb-[24px]">Contact us</p>
+            <div class="mb-[60px]">
+              <div class="flex flex-col">
+                <a class="text-[#E3E3E3]" href="#">+22 80 1234 4321</a>
+                <p class="font-inter text-white text-[14px] py-[16px]">Support</p>
+                <a class="text-[#E3E3E3]" href="#">+22 80 1234 2233</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center items-center mb-auto sm:hidden md:block w-[100%] px-[50px]">
+        <img  src="/LogoFooter.png" alt="logoFooter">
+      </div>
+    </footer>
+
+    <!-- Main JS -->
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
